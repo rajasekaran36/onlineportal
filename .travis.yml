@@ -10,7 +10,7 @@ addons:
   sonarcloud:
     organization: "rajasekaranap-github"
     token:
-      secure: "901ba7050b6a188da263561f61e8644225082679"
+      secure: ${901ba7050b6a188da263561f61e8644225082679}
 
 # before_install:
 # - chmod +x mvnw
