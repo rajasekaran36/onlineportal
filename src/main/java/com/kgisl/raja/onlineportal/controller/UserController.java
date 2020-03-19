@@ -4,7 +4,6 @@ import java.util.List;
 
 import com.kgisl.raja.onlineportal.model.User;
 import com.kgisl.raja.onlineportal.service.UserServiceImp;
-import com.kgisl.raja.onlineportal.service.userServiceImp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
