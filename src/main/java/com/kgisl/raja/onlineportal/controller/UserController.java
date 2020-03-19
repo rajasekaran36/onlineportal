@@ -3,7 +3,8 @@ package com.kgisl.raja.onlineportal.controller;
 import java.util.List;
 
 import com.kgisl.raja.onlineportal.model.User;
-import com.kgisl.raja.onlineportal.service.UserDaoImplService;
+import com.kgisl.raja.onlineportal.service.UserServiceImp;
+import com.kgisl.raja.onlineportal.service.userServiceImp;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -25,34 +26,34 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
     @Autowired
-    UserDaoImplService userDaoImplService;
+    UserServiceImp userServiceImp;
 
     @GetMapping("/get/all")
     public @ResponseBody ResponseEntity<List<User>> all(){
-        return new ResponseEntity<List<User>>(userDaoImplService.getAllUsers(),HttpStatus.OK);
+        return new ResponseEntity<List<User>>(userServiceImp.getAllUsers(),HttpStatus.OK);
     }
 
     @GetMapping("/get/{id}")
     public @ResponseBody ResponseEntity<User> getById(@PathVariable(value = "id") Long id){
-        return new ResponseEntity<User>(userDaoImplService.getUserById(id),HttpStatus.OK);
+        return new ResponseEntity<User>(userServiceImp.getUserById(id),HttpStatus.OK);
     }
 
     @PostMapping(value = "/add", headers = "Accept=application/json")
     public @ResponseBody ResponseEntity<User> addUser(@RequestBody User user){
-        return new ResponseEntity<User>(userDaoImplService.addUser(user),HttpStatus.CREATED);
+        return new ResponseEntity<User>(userServiceImp.addUser(user),HttpStatus.CREATED);
     }
     @PutMapping(value = "/update",headers = "Accept=application/json")
     public @ResponseBody ResponseEntity<User> updateUser(@RequestBody User user){
-        return new ResponseEntity<User>(userDaoImplService.updateUser(user),HttpStatus.OK);
+        return new ResponseEntity<User>(userServiceImp.updateUser(user),HttpStatus.OK);
     }
 
     @DeleteMapping("/delete/{id}")
     public @ResponseBody void deleteById(@PathVariable(value = "id") Long id){
-        userDaoImplService.deleteUserById(id);
+        userServiceImp.deleteUserById(id);
     }
 
     @DeleteMapping("/delete/all")
     public @ResponseBody void deleteAll(){
-        userDaoImplService.deleteAllUsers();
+        userServiceImp.deleteAllUsers();
     }
 }

@@ -12,7 +12,7 @@ import org.springframework.stereotype.Service;
  * UserDaoImplService
  */
 @Service
-public class UserDaoImplService implements UserDao {
+public class UserServiceImp implements UserService {
 
     @Autowired
     UserRepository userRepository;

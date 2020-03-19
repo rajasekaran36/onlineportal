@@ -6,7 +6,7 @@ import java.util.List;
 /**
  * UserDao
  */
-public interface UserDao {
+public interface UserService {
     public List<User> getAllUsers();
     public User getUserById(Long id);
     public User addUser(User user);
