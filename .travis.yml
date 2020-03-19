@@ -1,5 +1,7 @@
-sudo: required
+sudo: false
 language: java
+install: true
+
 # jdk: oraclejdk8
 
 git:
@@ -10,12 +12,14 @@ addons:
     token:
       secure: 901ba7050b6a188da263561f61e8644225082679
 
-before_install:
-- chmod +x mvnw
+# before_install:
+# - chmod +x mvnw
 
 script:
-- "./mvnw clean install -B"
-- "./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar"
+# - "./mvnw clean install -B"
+# - "./mvnw clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar"
+  - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent package sonar:sonar
+
 cache:
   directories:
   - "$HOME/.m2/repository"
