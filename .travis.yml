@@ -8,7 +8,7 @@ git:
   depth: 500
 addons:
   sonarcloud:
-    organization: "rajasekaranap-github"
+    organization: "rajasekaranap"
     token:
       secure: ${901ba7050b6a188da263561f61e8644225082679}
 
