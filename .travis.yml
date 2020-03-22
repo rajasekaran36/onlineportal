@@ -6,11 +6,11 @@ jdk: openjdk8
 
 git:
   depth: 500
-addons:
-  sonarcloud:
-    organization: "rajasekaranap"
-    token:
-      secure: ${901ba7050b6a188da263561f61e8644225082679}
+#addons:
+# sonarcloud:
+#   organization: "rajasekaranap"
+#   token:
+#     secure: ${901ba7050b6a188da263561f61e8644225082679}
 
 # before_install:
 # - chmod +x mvnw
