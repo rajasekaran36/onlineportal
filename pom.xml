@@ -16,6 +16,10 @@
 
 	<properties>
 		<java.version>1.8</java.version>
+		<sonar.projectKey>onlineportal</sonar.projectKey>
+		<sonar.organization>rajasekaran-github</sonar.organization>
+		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
+		<sonar.login>0496ad182418ec353f77b4df44326e67000a1472</sonar.login>
 	</properties>
 
 	<dependencies>
